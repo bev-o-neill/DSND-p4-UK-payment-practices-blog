@@ -26,7 +26,7 @@ The dataset used in this Jupyter notebook is payment-practices.csv. Note that th
 
 ## Results
 
-The main findings of this analysis are summarised in a blog post available here.
+The main findings of this analysis are summarised in a blog post available here: https://medium.com/@oneill.beverley/late-payment-practices-is-this-the-ticking-time-bomb-of-the-uk-economy-5b958e4dd109
 
 ## Licensing, Authors, Acknowledgements
 
