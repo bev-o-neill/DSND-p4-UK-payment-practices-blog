@@ -2,34 +2,50 @@
 
 ## Installation
 
-The code was written in Python 2 and requires the following packages: Pandas, Numpy, Matplotlib, and Seaborn.
+The code was developed using Python 3, PySpark v.xxx, Pandas, Numpy and Matplotlib, and Seaborn.
 
 ## Project Motivation
+Customer churn is a thorny issue for many businesses.  Losing customers means losing revenue. British businesses are losing an eye-watering £25bn per year in avoidable customer churn. 
 
-Late payments remain a contentious issue for many small and medium-sized enterprises. Big businesses often impose protracted terms or delay payments beyond what was agreed as it gives them access to cheap credit for working capital. It's common practice, but failing to pay suppliers on time can have adverse affects for cash-flow, impact the suppliers' ability to trade and in severe cases risks businesses' solvency. In the UK alone it has been estimated that £26 billion is tied up in late supplier payments owed to SMEs. Prompt payment could prevent 50,000 businesses' deaths each year, which cost £2.5 billion to the UK economy.
-
-To crack down on late payment practices, the UK Government introduced legislation in April 2017, requiring that large UK companies and limited liability partnerships publish twice-yearly reports on their payment performance and policies. Failure to comply with these rules is a criminal offence and can result in a hefty fine.
-
-The motivation behind this analysis is to explore these published reports in order to better understand the payment practices of UK big business. In particular we wish to answer the following questions:
-
-* What is the average time for a company to pay?
-* What proportopn of invoices are paid late?
-* How about those companies that have signed up to the Prompt Payment Code?
-* Do companies that offer financial solutions perform better?
-* Are we seeing any improvements over time?
+Sparkify, a fictitious music-streaming company, wants to get a grip on their own customer churn. They've given us access to a sample of their event log database to develop a model for predicting who of their user base is a flight-risk.
 
 ## File Descriptions
 
-All analysis is contained in the Jupyter notebook payment-practices-analysis.ipynb
+All analysis and model development is contained in the Jupyter notebook sparkify.ipynb
 
-The dataset used in this Jupyter notebook is payment-practices.csv. Note that this is a copy of the payments practices report data published by the Department for Business, Energy & Industrial Strategy, UK Government. This data was extracted on 28th Jan 2020.
+The dataset used in this Jupyter notebook is mini_sparkify_event_data.json. This data is a sample of the full Sparkify dataset made available by Udacity. The full dataset needs to be accessed and analysed via a Spark cluster deployed on the cloud, which is not in scope for this project. This would be an obvious extension to the work presented here.
 
 ## Results
 
-The main findings of this analysis are summarised in a blog post available here: https://medium.com/@oneill.beverley/late-payment-practices-is-this-the-ticking-time-bomb-of-the-uk-economy-5b958e4dd109
+The main findings of this analysis are summarised in a blog post available here: <insert blog link here>
+
+We developed 65 variables. These can be broadly categorised as:
+* Time since registration and latest activity
+* Subscription level
+* Sessions counts
+* Interaction counts
+* Songs played
+* Home/Add Friend/Add to Playlist/Next Song/Thumbs Up/Logout page views
+* Days/Weeks/Fortnights active and activity ratios
+* Session/interaction/time on site in the weeks 1,2,3,4 prior to latest activity
+* Ratio of activity in the final fortnight compared to the fortnight previous.
+
+Model were developed using the PySpark ML library.  The model algorithms we used were: 
+* Naive Bayes
+* Logistic Regression 
+* Gradient Boosted Tree 
+* Linear SVM
+
+Model results: 
+* Naive Bayes (F1 Score: xxx)
+* Logistic Regression (F1 Score: xxx)
+* Gradient Boosted Tree (F1 Score: xxx)
+* Linear SVM (F1 Score: xxx)
+
+Hyperparameter tuning was run on the Gradient Boosted Tree. Final model results:
+* F1 Score: xxx
+* Area under the Precision-Recall curve: xxx
 
 ## Licensing, Authors, Acknowledgements
+Dataset are courtesy of Udacity.
 
-The payments practices report data is licensed under the Open Government Licence v3.0 except where otherwise stated.
-
-The code contained in this repository may be used freely with acknowledgement.
